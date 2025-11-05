@@ -1,0 +1,34 @@
+{
+  "url": "https://www.reidoslotsinais.com/admin/login",
+  "timestamp": "2025-11-05T03:17:44.818798",
+  "vulnerabilities": [
+    {
+      "type": "CSRF - Falta de Proteção",
+      "severity": "MÉDIA",
+      "description": "Nenhum token CSRF detectado no formulário",
+      "evidence": "O formulário pode ser vulnerável a ataques CSRF",
+      "timestamp": "2025-11-05T03:17:47.527658"
+    },
+    {
+      "type": "Brute Force - Falta de Proteção",
+      "severity": "MÉDIA",
+      "description": "Nenhuma proteção contra brute force detectada",
+      "evidence": "Conseguiu fazer 10 tentativas sem bloqueio",
+      "timestamp": "2025-11-05T03:17:53.595144"
+    },
+    {
+      "type": "Política de Senha Fraca",
+      "severity": "BAIXA",
+      "description": "Sistema pode aceitar senhas fracas",
+      "evidence": "Não há validação aparente de força de senha",
+      "timestamp": "2025-11-05T03:17:53.711691"
+    },
+    {
+      "type": "Headers de Segurança Ausentes",
+      "severity": "MÉDIA",
+      "description": "Faltam headers de segurança importantes",
+      "evidence": "Headers ausentes: X-Frame-Options (Proteção contra clickjacking), X-Content-Type-Options (Proteção contra MIME sniffing), Strict-Transport-Security (Força HTTPS), Content-Security-Policy (Proteção contra XSS)",
+      "timestamp": "2025-11-05T03:17:53.802716"
+    }
+  ]
+}
